@@ -1,0 +1,107 @@
+// Define the breakpoints for mobile and tablet widths
+$mobile-max: 567px;
+$tablet-min: 768px;
+$tablet-max: 1023px;
+
+// Define a mixin for the mobile breakpoint
+@mixin mobile {
+  @media (max-width: $mobile-max) {
+    @content;
+  }
+}
+
+// Define a mixin for the tablet breakpoint
+@mixin tablet {
+  @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @content;
+  }
+}
+.login-container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #ffe2f0, #feefe8)
+}
+
+.login {
+    :first-child {
+        img {
+            pointer-events: none;
+            object-fit: contain;
+            width: 100%;
+        }
+
+    }
+
+    >:last-child {
+        background-color: white;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        overflow: hidden;
+        >:nth-child(1) {
+            padding-bottom: 10px;
+            span {
+                font-weight: bolder;
+                font-size: 20px;
+                color: rgb(53, 53, 53); 
+            }
+        }
+
+        >:nth-child(2) {
+            background-color: white;
+            padding-left: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.404);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            input {
+                padding: 10px;
+                // height: 100%;
+                outline: none;
+                width: 100%;
+                border: none;
+            }
+        }
+        >:nth-child(3){
+            padding: 15px 0;
+            p{
+                font-size: 13px;
+                font-weight: 500;
+                color: gray;
+                span{
+                    cursor: pointer;
+                    color: #ff0075;
+                }
+            }
+        }
+        >:nth-child(4){
+            width: 100%;
+            button{
+                width: 100%;
+                background-color: #ff0075;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+                &:hover{
+                    opacity: 0.9;
+
+                }
+            }
+        }
+        >:nth-child(5){
+            padding: 20px 0 0 0 ;
+            span{
+                cursor: pointer;
+                color: #ff0075;
+            }
+        }
+        @include mobile {
+            width: 100vw;
+          }
+    }
+
+}

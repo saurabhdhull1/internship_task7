@@ -1,0 +1,104 @@
+@mixin tablet {
+    @media (max-width: 1023px) {
+      @content;
+    }
+  }
+@mixin mobile {
+    @media (max-width: 620px) {
+      @content;
+    }
+  }
+
+
+// .content{
+//     width: 100vw;
+//     overflow-x: hidden;
+// }
+.flatoff{
+    position: fixed;
+    max-height: 400px;
+    // right: -580px;
+    transition: all .5s;
+    top: 40vh;
+    z-index: 999;
+    cursor: pointer;
+    // overflow: hidden;
+    object-fit: contain;
+
+    @include tablet{
+        height: 200px;
+    }
+    @include mobile{
+        display: none;
+    }
+
+    
+}
+// Dealday
+.Grid8{
+    // width: 100vw;
+    // overflow-x: hidden;
+    h3{
+        padding: 50px;
+        @include tablet{
+            padding: 20px;
+        }
+    }
+    .Grid8ImgDiv{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        img{
+            width: 100%;
+            cursor: pointer;
+        }
+        @include tablet{
+            grid-template-columns: repeat(4,1fr);
+        }
+    }
+}
+.Grid7{
+    // width: 100vw;
+    // overflow-x: hidden;
+    h3{
+        padding: 50px;
+        @include tablet{
+            padding: 20px;
+        }
+    }
+    .Grid7ImgDiv{
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        img{
+            width: 100%;
+            cursor: pointer;
+        }
+        @include tablet{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,1fr);
+        }
+    }
+}
+.Grid4{
+    // width: 100vw;
+    // overflow-x: hidden;
+    h3{
+        padding: 50px;
+        @include tablet{
+            padding: 20px;
+        }
+    }
+    .Grid4ImgDiv{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        img{
+            width: 100%;
+            cursor: pointer;
+        }
+        @include tablet{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+
+

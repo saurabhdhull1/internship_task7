@@ -10,10 +10,10 @@
   }
 
 
-// .content{
-//     width: 100vw;
-//     overflow-x: hidden;
-// }
+.content{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
 .flatoff{
     position: fixed;
     max-height: 400px;

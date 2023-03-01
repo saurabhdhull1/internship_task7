@@ -1,3 +1,10 @@
+section > *{
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
+}
+div{
+  color: var(--text-color) !important;
+}
 .footer_logo{
     display: flex;
     gap: 20px;
